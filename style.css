@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: purple;
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  border: none;
+  border-radius: 5px;
+  border: 2px solid purple;
+  text-align: center;
+}
+
+.listNotess th {
+  background-color: purple;
+  color: white;
+  padding: 10px 0;
+  width: 20%;
+}
+.listNotess .id_note{
+  width: 5%;
+}
+
+.listNotess td:first-child{
+  width: 5%;
+  
+}
+.listNotess td {
+  padding: 5px 10px;
+  height: 30px;
+}
+
+.formmmm {
+  border: 2px solid purple;
+  border-radius: 10px;
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px;
+  
+}
+.formmmm h1 {
+  text-transform: capitalize;
+  text-align: center;
+}
+.formmmm form {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+.formmmm form input,
+.formmmm form select, .formmmm form button {
+  border: none;
+  border-radius: 10px;
+  border: 2px solid purple;
+  padding: 10px;
+  font-size: 17px;
+  color: purple;
+  font-weight: 600;
+}
+.formmmm form #text{
+  padding:  30px 10px;
+  text-align: center;
+}
+.formmmm form :focus {
+  outline: none;
+}
+.formmmm form option {
+  background-color: white;
+}
+.formmmm form button {
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+.formmmm form button:hover{
+  background-color: transparent;
+  border-color:  purple;
+  color: purple;
+
+}
+
+
+
+.calendar h2 {
+border: 2px solid;
+padding: 10px 0;
+border-radius: 5px;
+text-align: center;
+}
+.calendar .top,
+.calendar .dayss{
+ display: grid;
+ grid-template-columns:repeat(8, 1fr);
+}
+.calendar .top h5{
+  text-align: center;
+  border: 2px solid ;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: white;
+  background-color: purple;
+}
+
+.calendar #noteCal tr td{
+width: 12.5% ;
+}
+.calendar .noteCal tr{
+  display: grid;
+  grid-template-columns:repeat(8, 1fr);
+}
+#noteList tr td:nth-child(6),#noteList tr td:nth-child(7){
+  padding: 0;
+}
+#noteList button{
+  width: 100% ;
+  height: 100% ;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+

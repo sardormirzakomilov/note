@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>js-15</title>
+</head>
+
+<body onload="getNote()">
+    <div class="container">
+        <table class="listNotess">
+            <thead>
+                <tr>
+                    <th class="id_note">N</th>
+                    <th>Text</th>
+                    <th>Date</th>
+                    <th>Hour</th>
+                    <th>Important</th>
+                </tr>
+            </thead>
+            <tbody id="noteList"></tbody>
+        </table>
+
+        <div class="formmmm">
+            <form action="#!">
+                <h1>Add note</h1>
+                <input type="text" id="text" placeholder="Note">
+                <input type="date" class="date" placeholder="">
+                <input type="time" class="time">
+                <select name="important" id="">
+                    <option value="imp">imp</option>
+                    <option value="md">md</option>
+                    <option value="low">low</option>
+                </select>
+                <button onclick="buttonn()">Click</button>
+            </form>
+        </div>
+
+        <div class="calendar">
+            <h2 id="monthhh"></h2>
+            <div class="top">
+                <h5>du</h5>
+                <h5>se</h5>
+                <h5>chor</h5>
+                <h5>pay</h5>
+                <h5>ju</h5>
+                <h5>sha</h5>
+                <h5>yak</h5>
+                <h5>caunt</h5>
+            </div>
+            <table id="noteCal"></table>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="dayss">
+                <div class="h4">
+                    <h4>27</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>28</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>29</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>30</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>1</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>2</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>3</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">0</div>
+            </div>
+            <div class="dayss">
+                <div class="h4">
+                    <h4>4</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>5</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>6</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>7</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>8</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>9</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>10</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">0</div>
+            </div>
+            <div class="dayss">
+                <div class="h4">
+                    <h4>11</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>12</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>13</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>14</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>15</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>16</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>17</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">0</div>
+            </div>
+            <div class="dayss">
+                <div class="h4">
+                    <h4>18</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>19</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>20</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>21</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>22</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>23</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>24</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">0</div>
+            </div>
+            <div class="dayss">
+                <div class="h4">
+                    <h4>25</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>26</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>27</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>28</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>29</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>30</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">
+                    <h4>31</h4>
+                    <div class="noteCal"></div>
+                </div>
+                <div class="h4">0</div>
+            </div> -->
+        
+    <script src="./script.js"></script>
+</body>
+
+</html>
